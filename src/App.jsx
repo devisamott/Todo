@@ -1,15 +1,18 @@
 
 import './App.css'
-import { Item } from './TodoItem'
+import { TodoProvider } from './Provider'
+import { List } from './TodoList'
 import { Search } from './TodoSearch'
 
 function App() {
 
   return (
-    <>
-      <Search/>
-      <Item/>
-    </>
+     <TodoProvider>
+      <div className="App">
+        <Search />
+        <List />
+      </div>
+    </TodoProvider>
   )
 }
 
